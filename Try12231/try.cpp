@@ -52,25 +52,46 @@ void main(){
 // 	// º∆À„
 
 	//3
-	int de,mi,se;
-	double deg;
-	const int miperde = 60;
-	const int sepermi = 60;
+// 	int de,mi,se;
+// 	double deg;
+// 	const int miperde = 60;
+// 	const int sepermi = 60;
+// 
+// 	cout<<"Ener a latitude in degrees, minutes, and seconds:\n"
+// 			<<"First, enter the degrees:";
+// 	cin>>de;
+// 	cout<<"Next, enter the minutes of arc:";
+// 	cin >>mi;
+// 	cout<<"Finally , enter the second of arc:";
+// 	cin >>se;
+// 	deg = de + 1.0/miperde * mi + 1.0/ miperde * 1.0/sepermi * se;
+// 	
+// 	cout<<de<<" degrees, "
+// 		<<mi<<" minutes, "
+// 		<<se<<" seconds = "
+// 		<<deg<<"degrees\n";
+// 	cout<<"_________________________________"<<endl<<endl;   
 
-	cout<<"Ener a latitude in degrees, minutes, and seconds:\n"
-			<<"First, enter the degrees:";
-	cin>>de;
-	cout<<"Next, enter the minutes of arc:";
-	cin >>mi;
-	cout<<"Finally , enter the second of arc:";
-	cin >>se;
-	deg = de + 1.0/miperde * mi + 1.0/ miperde * 1.0/sepermi * se;
-	
-	cout<<de<<" degrees, "
-		<<mi<<" minutes, "
-		<<se<<" seconds = "
-		<<deg<<"degrees\n";
-	cout<<"_________________________________"<<endl<<endl;   
+	//4
+	long allseconds,temp;
+	int days,hours,minutes,seconds;
+	const int kHoursInADay=24;
+	const int kMinutesInAnHour=60;
+	const int kSecondsInAMinute=60;
+	cout<<"Enter a long number of seconds: "<<endl;
+	cin>>allseconds;	
+	seconds = allseconds % kSecondsInAMinute;
+	temp		= allseconds / kSecondsInAMinute;
+	minutes = temp % kMinutesInAnHour;
+	temp		= temp / kMinutesInAnHour;
+	hours		= temp % kHoursInADay;
+	days		= temp / kHoursInADay;
+	printf("%d seconds = %d days, %d minutes , %d seconds\n", 
+					allseconds, days, minutes, seconds);
+	cout<<"_________________________________\n\n"; 
+
+
+
 
 	system("pause");
 
