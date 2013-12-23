@@ -29,15 +29,27 @@ void main(){
 	//
 
 	//2
- 	int height;
+ 	int stature,weight;
+
  	const int inchesprefoor=12;
- 	cout<< " Enter your bodyheight by inches: _______\b\b\b\b\b";
- 	cin>> height;
- 	int hf,hi;
- 	hf = height / inchesprefoor;
- 	hi = height % inchesprefoor;
-  cout<< "\n Your height is "<< hf <<" feet and "<< hi <<" inches. "<<endl;
- 	cout<<"_________________________________"<<endl<<endl;   
+ 	cout<< " Enter your stature by inches: _______\b\b\b\b\b";
+ 	cin>> stature;
+	cout<< " Enter your bodyweight by pounds: _______\b\b\b\b\b";
+	cin>>weight;
+
+	const double metersperinch = 0.0254;
+	const double poundsperkg = 2.2;
+ 	int hf,hi; 	
+	double kg,bmi,meter;
+	hf = stature / inchesprefoor;
+	hi = stature % inchesprefoor;
+	meter = stature * metersperinch;
+	kg = weight / poundsperkg;
+	bmi = kg / ( meter * meter);
+	cout<<" Your body statics are "<<meter<<"m and "<<kg<<" kg"<<endl;
+	cout<< " Your BMI is: "<<bmi<<endl;
+	cout<<"_________________________________"<<endl<<endl;   
+	//¼ÆËã×ª»»£»
 
 	system("pause");
 
