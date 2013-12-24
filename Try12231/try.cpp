@@ -14,79 +14,72 @@ void main(){
 	cout<< "C++_Primer_Plus"<<endl;
 	cout<<"    by itAir"<<endl;        
 	cout<<"Hello World!"<<endl;
-	cout<<"_________________________________"<<endl<<endl;        
-
+	cout<<"_________________________________"<<endl<<endl;     
 	//1
-// 	int height;
-// 	const int inchesprefoor=12;
-// 	cout<< " Enter your bodyheight by inches: _______\b\b\b\b\b";
-// 	cin>> height;
-// 	int hf,hi;
-// 	hf = height / inchesprefoor;
-// 	hi = height % inchesprefoor;
-//   cout<< "\n Your height is "<< hf <<" feet and "<< hi <<" inches. "<<endl;
+	int height;
+	const int inchesprefoor=12;
+	cout<< " Enter your bodyheight by inches: _______\b\b\b\b\b";
+	cin>> height;
+	int hf,hi;
+	hf = height / inchesprefoor;
+	hi = height % inchesprefoor;
+  cout<< "\n Your height is "<< hf <<" feet and "<< hi <<" inches. "<<endl;
  	cout<<"_________________________________"<<endl<<endl;   
-	//
-
+	//cout 支持转义符
+	//const 代替 #define google风格 常量用k开头 /整除 %求余
 	//2
-//  	int stature,weight;
-// 
-//  	const int inchesprefoor=12;
-//  	cout<< " Enter your stature by inches: _______\b\b\b\b\b";
-//  	cin>> stature;
-// 	cout<< " Enter your bodyweight by pounds: _______\b\b\b\b\b";
-// 	cin>>weight;
-// 
-// 	const double metersperinch = 0.0254;
-// 	const double poundsperkg = 2.2;
-//  	int hf,hi; 	
-// 	double kg,bmi,meter;
-// 	hf = stature / inchesprefoor;
-// 	hi = stature % inchesprefoor;
-// 	meter = stature * metersperinch;
-// 	kg = weight / poundsperkg;
-// 	bmi = kg / ( meter * meter);
-// 	cout<<" Your body statics are "<<meter<<"m and "<<kg<<" kg"<<endl;
-// 	cout<< " Your BMI is: "<<bmi<<endl;
+ 	int stature,weight;
+ 	const int inchesprefoor=12;
+ 	cout<< " Enter your stature by inches: _______\b\b\b\b\b";
+ 	cin>> stature;
+	cout<< " Enter your bodyweight by pounds: _______\b\b\b\b\b";
+	cin>>weight;
+	const double metersperinch = 0.0254;
+	const double poundsperkg = 2.2;
+ 	int hf,hi; 	
+	double kg,bmi,meter;
+	hf = stature / inchesprefoor;
+	hi = stature % inchesprefoor;
+	meter = stature * metersperinch;
+	kg = weight / poundsperkg;
+	bmi = kg / ( meter * meter);
+	cout<<" Your body statics are "<<meter<<"m and "<<kg<<" kg"<<endl;
+	cout<< " Your BMI is: "<<bmi<<endl;
  	cout<<"_________________________________"<<endl<<endl;   
-// 	// 计算
-
-	//3
-// 	int de,mi,se;
-// 	double deg;
-// 	const int miperde = 60;
-// 	const int sepermi = 60;
-// 
-// 	cout<<"Ener a latitude in degrees, minutes, and seconds:\n"
-// 			<<"First, enter the degrees:";
-// 	cin>>de;
-// 	cout<<"Next, enter the minutes of arc:";
-// 	cin >>mi;
-// 	cout<<"Finally , enter the second of arc:";
-// 	cin >>se;
-// 	deg = de + 1.0/miperde * mi + 1.0/ miperde * 1.0/sepermi * se;
-// 	
-// 	cout<<de<<" degrees, "
-// 		<<mi<<" minutes, "
-// 		<<se<<" seconds = "
-// 		<<deg<<"degrees\n";
+// 计算精度注意类型转换
+		//3
+	int de,mi,se;
+	double deg;
+	const int miperde = 60;
+	const int sepermi = 60;
+		cout<<"Ener a latitude in degrees, minutes, and seconds:\n"
+			<<"First, enter the degrees:";
+	cin>>de;
+	cout<<"Next, enter the minutes of arc:";
+	cin >>mi;
+	cout<<"Finally , enter the second of arc:";
+	cin >>se;
+	deg = de + 1.0/miperde * mi + 1.0/ miperde * 1.0/sepermi * se;
+	cout<<de<<" degrees, "<<mi<<" minutes, "
+		<<se<<" seconds = "<<deg<<"degrees\n";
+	//不用奇异数，尽量用常量代替
  	cout<<"_________________________________"<<endl<<endl; 
 	//4
-// 	long allseconds,temp;
-// 	int days,hours,minutes,seconds;
-// 	const int kHoursInADay=24;
-// 	const int kMinutesInAnHour=60;
-// 	const int kSecondsInAMinute=60;
-// 	cout<<"Enter a long number of seconds: "<<endl;
-// 	cin>>allseconds;	
-// 	seconds = allseconds % kSecondsInAMinute;
-// 	temp		= allseconds / kSecondsInAMinute;
-// 	minutes = temp % kMinutesInAnHour;
-// 	temp		= temp / kMinutesInAnHour;
-// 	hours		= temp % kHoursInADay;
-// 	days		= temp / kHoursInADay;
-// 	printf("%d seconds = %d days, %d minutes , %d seconds\n", 
-// 					allseconds, days, minutes, seconds);
+	long allseconds,temp;
+	int days,hours,minutes,seconds;
+	const int kHoursInADay=24;
+	const int kMinutesInAnHour=60;
+	const int kSecondsInAMinute=60;
+	cout<<"Enter a long number of seconds: "<<endl;
+	cin>>allseconds;	
+	seconds = allseconds % kSecondsInAMinute;
+	temp		= allseconds / kSecondsInAMinute;
+	minutes = temp % kMinutesInAnHour;
+	temp		= temp / kMinutesInAnHour;
+	hours		= temp % kHoursInADay;
+	days		= temp / kHoursInADay;
+	printf("%d seconds = %d days, %d minutes , %d seconds\n", 
+					allseconds, days, minutes, seconds);
 	cout<<"_________________________________\n\n"; 
 	//5
 	double range, petrol, fuelrate;
@@ -107,7 +100,7 @@ void main(){
 	fuelrate_mpg =  range_mile / petrol_gallon;
 	cout<< "Your 'US' Car can run "<<fuelrate_mpg<< " Miles/Gallon.\n";
 	cout<<"_________________________________\n\n"; 
-
+	//常量名使用可以有效提高代码可读性。
 
 	system("pause");
 
